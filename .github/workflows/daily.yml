@@ -21,6 +21,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       - name: Run generator
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
