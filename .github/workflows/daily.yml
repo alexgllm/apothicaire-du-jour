@@ -18,9 +18,6 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: pip install google-generativeai requests
-
       - name: Run generator
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -28,8 +25,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config user.name github-actions
-          git config user.email actions@github.com
-          git add .
-          git commit -m "daily update" || echo "nothing to commit"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add site/today.json
+          git commit -m "daily update" || exit 0
           git push
