@@ -8,7 +8,7 @@ from urllib.parse import quote
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).parent
-OUT_FILE = ROOT / "site" / "today.json"
+OUT_FILE = ROOT / "docs" / "today.json"
 START_DATE = date(2026, 1, 1)
 MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
 API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
