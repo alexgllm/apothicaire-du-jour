@@ -4,147 +4,255 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Apothicaire du jour</title>
-
   <style>
+    :root {
+      --bg: #f4efe3;
+      --card: #ffffff;
+      --text: #2f2a24;
+      --green: #355c3a;
+      --green-dark: #26402a;
+      --soft: #eef5ea;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
     body {
       font-family: Georgia, serif;
-      background: #f4f1e8;
-      color: #2d2d2d;
-      max-width: 900px;
+      background: var(--bg);
+      color: var(--text);
+      max-width: 980px;
       margin: auto;
-      padding: 30px;
+      padding: 28px;
       line-height: 1.7;
     }
 
     h1 {
-      font-size: 3rem;
-      color: #355c3a;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      color: var(--green);
+      margin-bottom: 18px;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      margin-bottom: 28px;
     }
 
     .card {
-      background: white;
-      padding: 25px;
+      background: var(--card);
+      padding: 28px;
+      border-radius: 22px;
+      margin-top: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 620px;
       border-radius: 18px;
-      margin-top: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin: 18px 0 26px 0;
+      display: block;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 0;
+      color: var(--green-dark);
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: var(--green-dark);
+    }
+
+    .section {
+      margin-top: 22px;
+      padding-top: 4px;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #2a2a2a;
+    }
+
+    .body-text {
+      white-space: pre-line;
+      font-size: 1.05rem;
     }
 
     .quiz {
-      margin-top: 30px;
-      padding: 20px;
-      background: #eef5ea;
-      border-radius: 14px;
+      margin-top: 22px;
+      padding: 22px;
+      background: var(--soft);
+      border-radius: 18px;
+    }
+
+    .choice {
+      margin: 10px 0;
+      display: block;
     }
 
     button {
-      margin-top: 15px;
+      margin-top: 16px;
       padding: 10px 18px;
       border: none;
-      background: #355c3a;
+      background: var(--green);
       color: white;
-      border-radius: 10px;
+      border-radius: 12px;
       cursor: pointer;
       font-size: 1rem;
     }
 
     button:hover {
-      background: #27442b;
+      background: var(--green-dark);
     }
 
     .answer {
-      margin-top: 10px;
+      margin-top: 12px;
       font-weight: bold;
+    }
+
+    .meta {
+      font-size: 0.95rem;
+      color: #6b665f;
+      margin-top: 6px;
+    }
+
+    .error {
+      color: #a33;
+      background: #fff2f2;
+      padding: 16px;
+      border-radius: 12px;
     }
   </style>
 </head>
 
 <body>
+  <h1>🌿 Apothicaire du jour</h1>
+  <p class="lead">Un site gratuit pour apprendre une plante par jour, avec un quiz pour vérifier ce que tu retiens.</p>
 
-<h1>🌿 Apothicaire du jour</h1>
+  <div id="content" class="card">Chargement...</div>
 
-<div id="content">
-  Chargement...
-</div>
+  <script>
+    function escapeHtml(text) {
+      return String(text ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
 
-<script>
-async function loadPlant() {
-  try {
-    const response = await fetch('./today.json');
-    const data = await response.json();
+    function formatText(text) {
+      return escapeHtml(text).replace(/\n/g, "<br>");
+    }
 
-    let html = `
-      <div class="card">
-        <h2>${data.plant_name}</h2>
+    function buildQuiz(quiz) {
+      return quiz.map((q, index) => {
+        const choicesHtml = q.choices.map(choice => `
+          <label class="choice">
+            <input type="radio" name="q${index}" value="${escapeHtml(choice)}">
+            ${escapeHtml(choice)}
+          </label>
+        `).join("");
 
-        <p><strong>Nom latin :</strong> ${data.latin_name}</p>
+        return `
+          <div class="quiz">
+            <h3>Question ${index + 1}</h3>
+            <p>${escapeHtml(q.question)}</p>
+            ${choicesHtml}
+            <button onclick="checkAnswer(${index}, ${JSON.stringify(q.answer)})">Vérifier</button>
+            <div id="result${index}" class="answer"></div>
+          </div>
+        `;
+      }).join("");
+    }
 
-        <p><strong>Où pousse cette plante ?</strong><br>
-        ${data.where_grows}</p>
+    function checkAnswer(index, answer) {
+      const selected = document.querySelector(`input[name="q${index}"]:checked`);
+      const result = document.getElementById(`result${index}`);
 
-        <p><strong>Utilisation en cuisine :</strong><br>
-        ${data.culinary_uses}</p>
+      if (!selected) {
+        result.textContent = "Choisis une réponse.";
+        result.style.color = "#a33";
+        return;
+      }
 
-        <p><strong>Bienfaits traditionnels :</strong><br>
-        ${data.traditional_benefits}</p>
+      if (selected.value === answer) {
+        result.textContent = "✅ Bonne réponse !";
+        result.style.color = "green";
+      } else {
+        result.textContent = `❌ Mauvaise réponse. Réponse : ${answer}`;
+        result.style.color = "#a33";
+      }
+    }
 
-        <p><strong>Précautions :</strong><br>
-        ${data.precautions}</p>
-      </div>
-    `;
+    async function loadPlant() {
+      const content = document.getElementById("content");
 
-    data.quiz.forEach((q, index) => {
-      html += `
-        <div class="quiz">
-          <h3>Question ${index + 1}</h3>
-          <p>${q.question}</p>
+      try {
+        const response = await fetch("./today.json?ts=" + Date.now());
+        if (!response.ok) {
+          throw new Error(`Impossible de charger today.json (${response.status})`);
+        }
 
-          ${q.choices.map(choice => `
-            <div>
-              <label>
-                <input type="radio" name="q${index}" value="${choice}">
-                ${choice}
-              </label>
-            </div>
-          `).join('')}
+        const data = await response.json();
 
-          <button onclick="checkAnswer(${index}, '${q.answer}')">
-            Vérifier
-          </button>
+        const imageBlock = data.image ? `
+          <img
+            src="${escapeHtml(data.image)}"
+            alt="${escapeHtml(data.plant_name)}"
+            class="hero-image"
+          >
+        ` : "";
 
-          <div id="result${index}" class="answer"></div>
-        </div>
-      `;
-    });
+        content.innerHTML = `
+          <h2>${escapeHtml(data.plant_name)}</h2>
+          <div class="meta">Mise à jour du jour : ${escapeHtml(data.date || "")}</div>
 
-    document.getElementById('content').innerHTML = html;
+          ${imageBlock}
 
- } catch (e) {
-  console.error(e);
-  document.getElementById('content').innerHTML =
-    `<p>Erreur lors du chargement de la plante du jour : ${e.message}</p>`;
-  }
-}
+          <div class="section">
+            <div class="label">Nom latin</div>
+            <div class="body-text">${formatText(data.latin_name)}</div>
+          </div>
 
-function checkAnswer(index, answer) {
-  const selected = document.querySelector(`input[name="q${index}"]:checked`);
-  const result = document.getElementById(`result${index}`);
+          <div class="section">
+            <div class="label">Où pousse cette plante ?</div>
+            <div class="body-text">${formatText(data.where_grows)}</div>
+          </div>
 
-  if (!selected) {
-    result.innerHTML = "Choisis une réponse.";
-    return;
-  }
+          <div class="section">
+            <div class="label">Utilisation en cuisine</div>
+            <div class="body-text">${formatText(data.culinary_uses)}</div>
+          </div>
 
-  if (selected.value === answer) {
-    result.innerHTML = "✅ Bonne réponse !";
-    result.style.color = "green";
-  } else {
-    result.innerHTML = `❌ Mauvaise réponse. Réponse : ${answer}`;
-    result.style.color = "red";
-  }
-}
+          <div class="section">
+            <div class="label">Bienfaits traditionnels</div>
+            <div class="body-text">${formatText(data.traditional_benefits)}</div>
+          </div>
 
-loadPlant();
-</script>
+          <div class="section">
+            <div class="label">Précautions</div>
+            <div class="body-text">${formatText(data.precautions)}</div>
+          </div>
 
+          <div class="section">
+            <div class="label">Quiz du jour</div>
+            ${buildQuiz(data.quiz || [])}
+          </div>
+        `;
+      } catch (e) {
+        console.error(e);
+        content.innerHTML = `
+          <div class="error">
+            Erreur lors du chargement de la plante du jour : ${escapeHtml(e.message)}
+          </div>
+        `;
+      }
+    }
+
+    loadPlant();
+  </script>
 </body>
 </html>
