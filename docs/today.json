@@ -1,0 +1,41 @@
+{
+  "date": "2023-10-27",
+  "plant_name": "Pissenlit",
+  "latin_name": "Taraxacum sect. Taraxacum (souvent désigné sous le nom de Taraxacum officinale)",
+  "where_grows": "Cette plante très robuste pousse de manière spontanée dans les prairies, les pelouses, les jardins, les bords de chemins et les terrains vagues, principalement dans les régions tempérées.",
+  "culinary_uses": "Les jeunes feuilles peuvent être consommées en salade pour leur amertume caractéristique. Les boutons floraux sont parfois préparés comme des câpres, et les fleurs peuvent servir à la confection d'une gelée traditionnelle appelée cramaillotte.",
+  "traditional_benefits": "Dans l'usage traditionnel, il est souvent présenté comme un tonique favorisant l'élimination de l'eau (effet diurétique suggéré par son nom) et le confort digestif. Cependant, ces propriétés reposent principalement sur l'usage historique et nécessitent des études cliniques complémentaires pour être confirmées.",
+  "precautions": "Par mesure de précaution, sa consommation est déconseillée en cas d'obstruction des voies biliaires ou de calculs. Un risque d'allergie existe pour les personnes sensibles aux plantes de la famille des Astéracées. En cas de doute ou de traitement médical en cours, il est recommandé de consulter un professionnel de santé.",
+  "quiz": [
+    {
+      "question": "Quel autre nom vernaculaire courant attribue-t-on au pissenlit ?",
+      "choices": [
+        "Dent-de-lion",
+        "Herbe dorée",
+        "Fleur de soleil",
+        "Chicorée des prés"
+      ],
+      "answer": "Dent-de-lion"
+    },
+    {
+      "question": "Quelle partie de la plante utilise-t-on traditionnellement pour faire la gelée appelée 'cramaillotte' ?",
+      "choices": [
+        "Les racines",
+        "Les feuilles",
+        "Les fleurs",
+        "Les tiges"
+      ],
+      "answer": "Les fleurs"
+    },
+    {
+      "question": "À quelle famille botanique le pissenlit appartient-il ?",
+      "choices": [
+        "Les Rosacées",
+        "Les Astéracées",
+        "Les Lamiacées",
+        "Les Apiacées"
+      ],
+      "answer": "Les Astéracées"
+    }
+  ]
+}
