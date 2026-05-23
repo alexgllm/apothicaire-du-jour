@@ -3,40 +3,50 @@
   "plant_name": "Fenouil",
   "latin_name": "",
   "where_grows": "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de plantes de genres divers, notamment de la famille des Apiaceae. Ce sont des plantes herbacées au feuillage aromatique, dont certaines sont consommables. Le mot fenouil provient du latin Foeniculum qui signifie foin (foenum) de petite taille, nom donné en raison de la finesse de son feuillage.",
-  "culinary_uses": "Tu peux t'en servir pour des infusions, des plats simples ou des recettes de saison selon la plante.",
+  "culinary_uses": "La plante peut parfois être utilisée en tisane, en cuisine ou en condiment, selon l'espèce.",
   "traditional_benefits": "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de plantes de genres divers, notamment de la famille des Apiaceae. Ce sont des plantes herbacées au feuillage aromatique, dont certaines sont consommables. Le mot fenouil provient du latin Foeniculum qui signifie foin (foenum) de petite taille, nom donné en raison de la finesse de son feuillage.",
   "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Foeniculum_vulgare.JPG/330px-Foeniculum_vulgare.JPG",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Foeniculum_vulgare.JPG",
   "quiz": [
     {
-      "question": "Quelle est la plante du jour ?",
+      "question": "Où pousse surtout cette plante ?",
       "choices": [
-        "Fenouil",
-        "Carotte",
-        "Tomate",
-        "Poireau"
+        "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de…",
+        "Régions alpines très froides",
+        "Bords de chemins et prairies",
+        "Sols secs et très ensoleillés"
       ],
-      "answer": "Fenouil"
+      "answer": "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de…"
     },
     {
-      "question": "Cette fiche a-t-elle été générée automatiquement ?",
+      "question": "Quel usage culinaire correspond le mieux à cette plante ?",
       "choices": [
-        "Oui",
-        "Non",
-        "Peut-être",
-        "Je ne sais pas"
+        "La plante peut parfois être utilisée en tisane, en cuisine ou en…",
+        "En assaisonnement de plats simples",
+        "En macération ou en huile parfumée",
+        "En dessert ou en boisson aromatique"
       ],
-      "answer": "Oui"
+      "answer": "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
     },
     {
-      "question": "Quel est l'objectif principal de cette application ?",
+      "question": "Quel bienfait traditionnel est le mieux mis en avant ?",
       "choices": [
-        "Apprendre les plantes",
-        "Jouer aux échecs",
-        "Gérer des emails",
-        "Faire des mathématiques"
+        "Traditionnellement associée au confort digestif",
+        "Appréciée pour son côté tonique ou stimulant",
+        "Souvent utilisée pour la détente et l'apaisement",
+        "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de…"
       ],
-      "answer": "Apprendre les plantes"
+      "answer": "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de…"
+    },
+    {
+      "question": "Quelle précaution doit être retenue ?",
+      "choices": [
+        "Toujours tester les usages avec prudence",
+        "Contenu informatif uniquement",
+        "Contenu informatif, pas un conseil médical",
+        "Peut interagir avec certains traitements"
+      ],
+      "answer": "Contenu informatif uniquement"
     }
   ]
 }
