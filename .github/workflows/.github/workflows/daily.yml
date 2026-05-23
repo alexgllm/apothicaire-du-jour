@@ -1,0 +1,35 @@
+name: Daily plant update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 7 * * *"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install google-generativeai requests
+
+      - name: Run generator
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python generate.py
+
+      - name: Commit changes
+        run: |
+          git config user.name github-actions
+          git config user.email actions@github.com
+          git add .
+          git commit -m "daily update" || echo "nothing to commit"
+          git push
