@@ -10,10 +10,11 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).parent
 OUT_FILE = ROOT / "docs" / "today.json"
 START_DATE = date(2026, 1, 1)
-MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
 API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 
 PLANTS = [
+    "Pissenlit",
     "Romarin",
     "Menthe poivrée",
     "Thym",
@@ -24,7 +25,6 @@ PLANTS = [
     "Basilic",
     "Mélisse",
     "Fenouil",
-    "Pissenlit",
     "Verveine",
 ]
 
@@ -40,14 +40,14 @@ def fetch_wikipedia_summary(title: str) -> dict[str, str]:
         req = Request(url, headers={"User-Agent": "Mozilla/5.0"})
         with urlopen(req, timeout=20) as resp:
             data = json.loads(resp.read().decode("utf-8"))
-return {
-    "title": data.get("title", title),
-    "extract": data.get("extract", ""),
-    "url": data.get("content_urls", {}).get("desktop", {}).get("page", ""),
-    "image": data.get("thumbnail", {}).get("source", "")
+        return {
+            "title": data.get("title", title),
+            "extract": data.get("extract", ""),
+            "url": data.get("content_urls", {}).get("desktop", {}).get("page", ""),
+            "image": data.get("thumbnail", {}).get("source", ""),
         }
     except Exception:
-        return {"title": title, "extract": "", "url": ""}
+        return {"title": title, "extract": "", "url": "", "image": ""}
 
 
 def build_prompt(plant: str, wiki: dict[str, str]) -> str:
@@ -56,7 +56,8 @@ def build_prompt(plant: str, wiki: dict[str, str]) -> str:
 Tu écris en français, avec prudence, sur les plantes.
 
 Plante du jour: {plant}
-Source de contexte:
+
+Contexte utile:
 {source}
 
 Tâche:
@@ -68,20 +69,22 @@ Retourne UNIQUEMENT un JSON valide, sans texte autour, avec exactement ces clés
 - culinary_uses
 - traditional_benefits
 - precautions
-- image
 - quiz
 
 Contraintes:
-- Si une information n'est pas certaine, indique-le avec prudence.
-- Pas de promesse médicale.
-- Ton clair, simple, pédagogique.
-- Le champ quiz doit être un tableau de 3 objets.
+- traditional_benefits doit être plus développé: 3 à 6 phrases, concret, pédagogique, agréable à lire.
+- where_grows peut faire 2 phrases.
+- culinary_uses doit proposer plusieurs idées simples et utiles.
+- precautions doit rester prudente et rappeler qu'il ne s'agit pas d'un conseil médical.
+- quiz doit être un tableau de 3 objets.
 - Chaque objet quiz doit contenir:
   - question
   - choices (4 chaînes)
   - answer (une seule des choices)
+- N'utilise pas de Markdown.
+- JSON uniquement.
 
-Format JSON attendu:
+Format attendu:
 {{
   "date": "YYYY-MM-DD",
   "plant_name": "{plant}",
@@ -90,7 +93,6 @@ Format JSON attendu:
   "culinary_uses": "",
   "traditional_benefits": "",
   "precautions": "",
-"image": "",
   "quiz": [
     {{"question": "", "choices": ["", "", "", ""], "answer": ""}},
     {{"question": "", "choices": ["", "", "", ""], "answer": ""}},
@@ -118,14 +120,17 @@ def call_gemini(prompt: str) -> dict:
         "generationConfig": {
             "temperature": 0.4,
             "responseMimeType": "application/json",
+            "maxOutputTokens": 2048,
         },
     }
+
     req = Request(
         url,
         data=json.dumps(payload).encode("utf-8"),
         headers={"Content-Type": "application/json"},
         method="POST",
     )
+
     with urlopen(req, timeout=60) as resp:
         raw = json.loads(resp.read().decode("utf-8"))
 
@@ -133,17 +138,19 @@ def call_gemini(prompt: str) -> dict:
     return json.loads(text)
 
 
-def fallback_result(plant: str) -> dict:
+def fallback_result(plant: str, wiki: dict[str, str]) -> dict:
     today = date.today().isoformat()
+    extract = wiki.get("extract", "").strip()
+
     return {
         "date": today,
         "plant_name": plant,
         "latin_name": "",
-        "where_grows": "",
-        "culinary_uses": "",
-        "traditional_benefits": "",
-        "precautions": "",
-        "image": "",
+        "where_grows": extract or "Information non récupérée automatiquement.",
+        "culinary_uses": "Tu peux t'en servir pour des infusions, des plats simples ou des recettes de saison selon la plante.",
+        "traditional_benefits": extract or "Contenu informatif non disponible pour le moment.",
+        "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
+        "image": wiki.get("image", ""),
         "quiz": [
             {
                 "question": "Quelle est la plante du jour ?",
@@ -151,9 +158,9 @@ def fallback_result(plant: str) -> dict:
                 "answer": plant,
             },
             {
-                "question": "Cette fiche a-t-elle pu être générée par Gemini ?",
+                "question": "Cette fiche a-t-elle été générée automatiquement ?",
                 "choices": ["Oui", "Non", "Peut-être", "Je ne sais pas"],
-                "answer": "Non",
+                "answer": "Oui",
             },
             {
                 "question": "Quel est l'objectif principal de cette application ?",
@@ -177,13 +184,21 @@ def main() -> None:
     try:
         data = call_gemini(prompt)
     except Exception:
-        data = fallback_result(plant)
+        data = fallback_result(plant, wiki)
     else:
         data.setdefault("date", date.today().isoformat())
         data.setdefault("plant_name", plant)
+        data.setdefault("image", wiki.get("image", ""))
+
+        # Si Gemini renvoie une image vide, on garde celle de Wikipedia.
+        if not data.get("image"):
+            data["image"] = wiki.get("image", "")
 
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    OUT_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    OUT_FILE.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
 
 
 if __name__ == "__main__":
