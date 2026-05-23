@@ -40,10 +40,11 @@ def fetch_wikipedia_summary(title: str) -> dict[str, str]:
         req = Request(url, headers={"User-Agent": "Mozilla/5.0"})
         with urlopen(req, timeout=20) as resp:
             data = json.loads(resp.read().decode("utf-8"))
-        return {
-            "title": data.get("title", title),
-            "extract": data.get("extract", ""),
-            "url": data.get("content_urls", {}).get("desktop", {}).get("page", ""),
+return {
+    "title": data.get("title", title),
+    "extract": data.get("extract", ""),
+    "url": data.get("content_urls", {}).get("desktop", {}).get("page", ""),
+    "image": data.get("thumbnail", {}).get("source", "")
         }
     except Exception:
         return {"title": title, "extract": "", "url": ""}
@@ -67,6 +68,7 @@ Retourne UNIQUEMENT un JSON valide, sans texte autour, avec exactement ces clés
 - culinary_uses
 - traditional_benefits
 - precautions
+- image
 - quiz
 
 Contraintes:
@@ -88,6 +90,7 @@ Format JSON attendu:
   "culinary_uses": "",
   "traditional_benefits": "",
   "precautions": "",
+"image": "",
   "quiz": [
     {{"question": "", "choices": ["", "", "", ""], "answer": ""}},
     {{"question": "", "choices": ["", "", "", ""], "answer": ""}},
@@ -140,6 +143,7 @@ def fallback_result(plant: str) -> dict:
         "culinary_uses": "",
         "traditional_benefits": "",
         "precautions": "",
+        "image": "",
         "quiz": [
             {
                 "question": "Quelle est la plante du jour ?",
