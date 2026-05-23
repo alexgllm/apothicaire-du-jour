@@ -46,7 +46,9 @@
 
     .hero-image {
       width: 100%;
-      max-width: 620px;
+      max-width: 680px;
+      max-height: 420px;
+      object-fit: cover;
       border-radius: 18px;
       margin: 18px 0 26px 0;
       display: block;
@@ -73,6 +75,7 @@
     .label {
       font-weight: bold;
       color: #2a2a2a;
+      margin-bottom: 6px;
     }
 
     .body-text {
@@ -129,7 +132,7 @@
 
 <body>
   <h1>🌿 Apothicaire du jour</h1>
-  <p class="lead">Un site gratuit pour apprendre une plante par jour, avec un quiz pour vérifier ce que tu retiens.</p>
+  <p class="lead">Un site gratuit pour apprendre une plante par jour, avec un quiz basé sur la plante du jour.</p>
 
   <div id="content" class="card">Chargement...</div>
 
@@ -148,7 +151,7 @@
     }
 
     function buildQuiz(quiz) {
-      return quiz.map((q, index) => {
+      return (quiz || []).map((q, index) => {
         const choicesHtml = q.choices.map(choice => `
           <label class="choice">
             <input type="radio" name="q${index}" value="${escapeHtml(choice)}">
