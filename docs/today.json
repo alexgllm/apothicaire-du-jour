@@ -1,41 +1,42 @@
 {
-  "date": "2023-10-27",
-  "plant_name": "Pissenlit",
-  "latin_name": "Taraxacum sect. Taraxacum (souvent désigné sous le nom de Taraxacum officinale)",
-  "where_grows": "Cette plante très robuste pousse de manière spontanée dans les prairies, les pelouses, les jardins, les bords de chemins et les terrains vagues, principalement dans les régions tempérées.",
-  "culinary_uses": "Les jeunes feuilles peuvent être consommées en salade pour leur amertume caractéristique. Les boutons floraux sont parfois préparés comme des câpres, et les fleurs peuvent servir à la confection d'une gelée traditionnelle appelée cramaillotte.",
-  "traditional_benefits": "Dans l'usage traditionnel, il est souvent présenté comme un tonique favorisant l'élimination de l'eau (effet diurétique suggéré par son nom) et le confort digestif. Cependant, ces propriétés reposent principalement sur l'usage historique et nécessitent des études cliniques complémentaires pour être confirmées.",
-  "precautions": "Par mesure de précaution, sa consommation est déconseillée en cas d'obstruction des voies biliaires ou de calculs. Un risque d'allergie existe pour les personnes sensibles aux plantes de la famille des Astéracées. En cas de doute ou de traitement médical en cours, il est recommandé de consulter un professionnel de santé.",
+  "date": "2026-05-23",
+  "plant_name": "Fenouil",
+  "latin_name": "",
+  "where_grows": "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de plantes de genres divers, notamment de la famille des Apiaceae. Ce sont des plantes herbacées au feuillage aromatique, dont certaines sont consommables. Le mot fenouil provient du latin Foeniculum qui signifie foin (foenum) de petite taille, nom donné en raison de la finesse de son feuillage.",
+  "culinary_uses": "Tu peux t'en servir pour des infusions, des plats simples ou des recettes de saison selon la plante.",
+  "traditional_benefits": "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de plantes de genres divers, notamment de la famille des Apiaceae. Ce sont des plantes herbacées au feuillage aromatique, dont certaines sont consommables. Le mot fenouil provient du latin Foeniculum qui signifie foin (foenum) de petite taille, nom donné en raison de la finesse de son feuillage.",
+  "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Foeniculum_vulgare.JPG/330px-Foeniculum_vulgare.JPG",
   "quiz": [
     {
-      "question": "Quel autre nom vernaculaire courant attribue-t-on au pissenlit ?",
+      "question": "Quelle est la plante du jour ?",
       "choices": [
-        "Dent-de-lion",
-        "Herbe dorée",
-        "Fleur de soleil",
-        "Chicorée des prés"
+        "Fenouil",
+        "Carotte",
+        "Tomate",
+        "Poireau"
       ],
-      "answer": "Dent-de-lion"
+      "answer": "Fenouil"
     },
     {
-      "question": "Quelle partie de la plante utilise-t-on traditionnellement pour faire la gelée appelée 'cramaillotte' ?",
+      "question": "Cette fiche a-t-elle été générée automatiquement ?",
       "choices": [
-        "Les racines",
-        "Les feuilles",
-        "Les fleurs",
-        "Les tiges"
+        "Oui",
+        "Non",
+        "Peut-être",
+        "Je ne sais pas"
       ],
-      "answer": "Les fleurs"
+      "answer": "Oui"
     },
     {
-      "question": "À quelle famille botanique le pissenlit appartient-il ?",
+      "question": "Quel est l'objectif principal de cette application ?",
       "choices": [
-        "Les Rosacées",
-        "Les Astéracées",
-        "Les Lamiacées",
-        "Les Apiacées"
+        "Apprendre les plantes",
+        "Jouer aux échecs",
+        "Gérer des emails",
+        "Faire des mathématiques"
       ],
-      "answer": "Les Astéracées"
+      "answer": "Apprendre les plantes"
     }
   ]
 }
