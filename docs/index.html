@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apothicaire du jour</title>
+
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #f4f1e8;
+      color: #2d2d2d;
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+      line-height: 1.7;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #355c3a;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      margin-top: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .quiz {
+      margin-top: 30px;
+      padding: 20px;
+      background: #eef5ea;
+      border-radius: 14px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 18px;
+      border: none;
+      background: #355c3a;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #27442b;
+    }
+
+    .answer {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🌿 Apothicaire du jour</h1>
+
+<div id="content">
+  Chargement...
+</div>
+
+<script>
+async function loadPlant() {
+  try {
+    const response = await fetch('./site/today.json');
+    const data = await response.json();
+
+    let html = `
+      <div class="card">
+        <h2>${data.plant_name}</h2>
+
+        <p><strong>Nom latin :</strong> ${data.latin_name}</p>
+
+        <p><strong>Où pousse cette plante ?</strong><br>
+        ${data.where_grows}</p>
+
+        <p><strong>Utilisation en cuisine :</strong><br>
+        ${data.culinary_uses}</p>
+
+        <p><strong>Bienfaits traditionnels :</strong><br>
+        ${data.traditional_benefits}</p>
+
+        <p><strong>Précautions :</strong><br>
+        ${data.precautions}</p>
+      </div>
+    `;
+
+    data.quiz.forEach((q, index) => {
+      html += `
+        <div class="quiz">
+          <h3>Question ${index + 1}</h3>
+          <p>${q.question}</p>
+
+          ${q.choices.map(choice => `
+            <div>
+              <label>
+                <input type="radio" name="q${index}" value="${choice}">
+                ${choice}
+              </label>
+            </div>
+          `).join('')}
+
+          <button onclick="checkAnswer(${index}, '${q.answer}')">
+            Vérifier
+          </button>
+
+          <div id="result${index}" class="answer"></div>
+        </div>
+      `;
+    });
+
+    document.getElementById('content').innerHTML = html;
+
+  } catch (e) {
+    document.getElementById('content').innerHTML =
+      "<p>Erreur lors du chargement de la plante du jour.</p>";
+  }
+}
+
+function checkAnswer(index, answer) {
+  const selected = document.querySelector(`input[name="q${index}"]:checked`);
+  const result = document.getElementById(`result${index}`);
+
+  if (!selected) {
+    result.innerHTML = "Choisis une réponse.";
+    return;
+  }
+
+  if (selected.value === answer) {
+    result.innerHTML = "✅ Bonne réponse !";
+    result.style.color = "green";
+  } else {
+    result.innerHTML = `❌ Mauvaise réponse. Réponse : ${answer}`;
+    result.style.color = "red";
+  }
+}
+
+loadPlant();
+</script>
+
+</body>
+</html>
