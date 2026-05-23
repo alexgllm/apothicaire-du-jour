@@ -1,0 +1,41 @@
+{
+  "date": "2026-05-23",
+  "plant_name": "Pissenlit",
+  "latin_name": "",
+  "where_grows": "",
+  "culinary_uses": "",
+  "traditional_benefits": "",
+  "precautions": "",
+  "quiz": [
+    {
+      "question": "Quelle est la plante du jour ?",
+      "choices": [
+        "Pissenlit",
+        "Carotte",
+        "Tomate",
+        "Poireau"
+      ],
+      "answer": "Pissenlit"
+    },
+    {
+      "question": "Cette fiche a-t-elle pu être générée par Gemini ?",
+      "choices": [
+        "Oui",
+        "Non",
+        "Peut-être",
+        "Je ne sais pas"
+      ],
+      "answer": "Non"
+    },
+    {
+      "question": "Quel est l'objectif principal de cette application ?",
+      "choices": [
+        "Apprendre les plantes",
+        "Jouer aux échecs",
+        "Gérer des emails",
+        "Faire des mathématiques"
+      ],
+      "answer": "Apprendre les plantes"
+    }
+  ]
+}
