@@ -1,10 +1,12 @@
 name: Daily plant update
-permissions:
-  contents: write
+
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 7 * * *"
+
+permissions:
+  contents: write
 
 jobs:
   update:
@@ -22,6 +24,7 @@ jobs:
       - name: Run generator
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-2.0-flash
         run: python generate.py
 
       - name: Commit changes
