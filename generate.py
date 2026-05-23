@@ -6,15 +6,17 @@ import random
 from datetime import date
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 
-from google import genai
-from google.genai import types
+import requests
 
 ROOT = Path(__file__).parent
 PLANTS_FILE = ROOT / "data" / "plants.json"
 OUT_FILE = ROOT / "docs" / "today.json"
 START_DATE = date(2026, 1, 1)
-MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
+API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+GEMINI_ENDPOINT = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
 
 
 def load_plants() -> list[str]:
@@ -26,44 +28,90 @@ def choose_plant(plants: list[str]) -> str:
     return plants[days % len(plants)]
 
 
+def fetch_wikipedia_summary(query: str) -> dict[str, str]:
+    """Find a French Wikipedia summary for the plant name."""
+    search_url = "https://fr.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "list": "search",
+        "srsearch": query,
+        "format": "json",
+        "srlimit": 1,
+    }
+    try:
+        r = requests.get(search_url, params=params, timeout=20)
+        r.raise_for_status()
+        payload = r.json()
+        hits = payload.get("query", {}).get("search", [])
+        if not hits:
+            return {"title": query, "extract": ""}
+
+        title = hits[0]["title"]
+        summary_url = f"https://fr.wikipedia.org/api/rest_v1/page/summary/{quote(title)}"
+        s = requests.get(summary_url, timeout=20)
+        s.raise_for_status()
+        data = s.json()
+        return {
+            "title": data.get("title", title),
+            "extract": data.get("extract", ""),
+            "description": data.get("description", ""),
+            "url": data.get("content_urls", {}).get("desktop", {}).get("page", ""),
+        }
+    except Exception:
+        return {"title": query, "extract": ""}
+
+
 def fallback_payload(plant: str) -> dict[str, Any]:
-    rng = random.Random(plant)
     return {
         "date": date.today().isoformat(),
         "plant_name": plant,
-        "latin_name": "À compléter",
-        "where_grows": "À compléter",
-        "culinary_uses": "À compléter",
-        "traditional_benefits": "À compléter",
+        "latin_name": "A completer",
+        "where_grows": "A completer",
+        "culinary_uses": "A completer",
+        "traditional_benefits": "A completer",
         "precautions": "Contenu informatif uniquement.",
         "quiz": [
             {
-                "question": f"Quel est le point à retenir sur {plant} ?",
-                "choices": ["Réponse A", "Réponse B", "Réponse C", "Réponse D"],
-                "answer": "Réponse A"
+                "question": f"Quel est le point a retenir sur {plant} ?",
+                "choices": ["Reponse A", "Reponse B", "Reponse C", "Reponse D"],
+                "answer": "Reponse A",
             },
             {
-                "question": "Quelle donnée dois-tu relire ?",
-                "choices": ["Où ça pousse", "La couleur du ciel", "Le code postal", "Le nom du chat"],
-                "answer": "Où ça pousse"
+                "question": "Quelle donnee dois-tu relire ?",
+                "choices": ["Ou ca pousse", "La couleur du ciel", "Le code postal", "Le nom du chat"],
+                "answer": "Ou ca pousse",
             },
             {
                 "question": "Quel format doit rester la sortie ?",
                 "choices": ["JSON", "PDF", "PNG", "DOCX"],
-                "answer": "JSON"
-            }
-        ]
+                "answer": "JSON",
+            },
+        ],
     }
 
 
-def build_prompt(plant: str) -> str:
+def build_prompt(plant: str, wiki: dict[str, str]) -> str:
+    wiki_text = wiki.get("extract", "") or "Aucune description Wikipedia trouvee."
+    wiki_title = wiki.get("title", plant)
+    wiki_url = wiki.get("url", "")
+
     return f"""
-Tu es un assistant pédagogique spécialisé dans les plantes.
+Tu es un assistant pedagogique specialise dans les plantes.
 
-Utilise l'outil de recherche Google pour vérifier les informations à jour sur cette plante : {plant}.
+Tu dois produire une fiche en francais simple, prudente et utile pour apprendre.
+Base-toi sur les notes ci-dessous, puis complete avec prudence si besoin.
+N'invente pas de proprietes medicales fortes.
+Si une info est incertaine, reste vague.
 
-Réponds uniquement en JSON valide, sans texte autour.
-Le JSON doit contenir exactement ces clés :
+Plante: {plant}
+Source Wikipedia: {wiki_title}
+URL: {wiki_url}
+
+Notes:
+{wiki_text}
+
+Reponds uniquement en JSON valide, sans texte autour.
+Le JSON doit contenir exactement ces cles :
 - date
 - plant_name
 - latin_name
@@ -73,17 +121,17 @@ Le JSON doit contenir exactement ces clés :
 - precautions
 - quiz
 
-Le champ quiz doit être un tableau de 3 objets.
+Le champ quiz doit etre un tableau de 3 objets.
 Chaque objet doit contenir :
 - question
-- choices (4 réponses)
-- answer (une seule des 4 réponses)
+- choices (4 reponses)
+- answer (une seule des 4 reponses)
 
-Règles de rédaction :
-- français simple
-- prudence sur les bienfaits : pas de promesse médicale
+Règles:
+- francais simple
+- prudence sur les bienfaits
 - si une info est incertaine, formule-la avec prudence
-- garde des réponses courtes et claires
+- garde des reponses courtes et claires
 """.strip()
 
 
@@ -99,25 +147,46 @@ def parse_json(text: str) -> dict[str, Any]:
         raise
 
 
+def gemini_generate(prompt: str) -> dict[str, Any]:
+    if not API_KEY:
+        raise RuntimeError("GEMINI_API_KEY is missing")
+
+    body = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "temperature": 0.4,
+            "responseMimeType": "application/json",
+        },
+    }
+
+    r = requests.post(
+        GEMINI_ENDPOINT,
+        headers={
+            "x-goog-api-key": API_KEY,
+            "Content-Type": "application/json",
+        },
+        json=body,
+        timeout=90,
+    )
+    r.raise_for_status()
+    data = r.json()
+    candidates = data.get("candidates", [])
+    if not candidates:
+        raise RuntimeError("No candidates returned from Gemini")
+    parts = candidates[0].get("content", {}).get("parts", [])
+    text = "".join(part.get("text", "") for part in parts)
+    if not text:
+        raise RuntimeError("Empty Gemini response text")
+    return parse_json(text)
+
+
 def main() -> None:
     plants = load_plants()
     plant = choose_plant(plants)
-
-    client = genai.Client()
-    grounding_tool = types.Tool(google_search=types.GoogleSearch())
-    config = types.GenerateContentConfig(
-        tools=[grounding_tool],
-        temperature=0.4,
-        response_mime_type="application/json",
-    )
+    wiki = fetch_wikipedia_summary(plant)
 
     try:
-        response = client.models.generate_content(
-            model=MODEL,
-            contents=build_prompt(plant),
-            config=config,
-        )
-        data = parse_json(response.text)
+        data = gemini_generate(build_prompt(plant, wiki))
     except Exception:
         data = fallback_payload(plant)
 
