@@ -1,50 +1,50 @@
 {
-  "date": "2026-05-31",
-  "plant_name": "Lavande",
+  "date": "2026-06-01",
+  "plant_name": "Ortie",
   "latin_name": "",
-  "where_grows": "Les lavandes sont un genre de plantes à fleurs de la famille des Lamiaceae, anciennement nommées Labiées.",
+  "where_grows": "Urtica est un genre de plantes à fleurs de la famille des Urticacées qui regroupe une trentaine d'espèces de plantes herbacées à feuilles velues. On en trouve onze en Europe dont cinq en France.",
   "culinary_uses": "La plante peut parfois être utilisée en tisane, en cuisine ou en condiment, selon l'espèce.",
-  "traditional_benefits": "Les lavandes sont un genre de plantes à fleurs de la famille des Lamiaceae, anciennement nommées Labiées.",
+  "traditional_benefits": "Urtica est un genre de plantes à fleurs de la famille des Urticacées qui regroupe une trentaine d'espèces de plantes herbacées à feuilles velues. On en trouve onze en Europe dont cinq en France.",
   "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/Lavandula_angustifolia_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-087.jpg",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Is%C4%B1rgan_otu.jpg/3840px-Is%C4%B1rgan_otu.jpg",
   "quiz": [
     {
       "question": "Où pousse surtout cette plante ?",
       "choices": [
-        "Les lavandes sont un genre de plantes à fleurs de la famille…",
-        "Zones humides et ombragées",
         "Bords de chemins et prairies",
-        "Milieux tropicaux très chauds"
+        "Régions alpines très froides",
+        "Sols secs et très ensoleillés",
+        "Urtica est un genre de plantes à fleurs de la famille des…"
       ],
-      "answer": "Les lavandes sont un genre de plantes à fleurs de la famille…"
+      "answer": "Urtica est un genre de plantes à fleurs de la famille des…"
     },
     {
       "question": "Quel usage culinaire correspond le mieux à cette plante ?",
       "choices": [
-        "La plante peut parfois être utilisée en tisane, en cuisine ou en…",
         "En macération ou en huile parfumée",
-        "En dessert ou en boisson aromatique",
-        "En assaisonnement de plats simples"
+        "À consommer en salade ou en infusion",
+        "La plante peut parfois être utilisée en tisane, en cuisine ou en…",
+        "En dessert ou en boisson aromatique"
       ],
       "answer": "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
     },
     {
       "question": "Quel bienfait traditionnel est le mieux mis en avant ?",
       "choices": [
-        "Réputée pour un emploi traditionnel varié",
-        "Les lavandes sont un genre de plantes à fleurs de la famille…",
+        "Appréciée pour son côté tonique ou stimulant",
         "Souvent utilisée pour la détente et l'apaisement",
-        "Appréciée pour son côté tonique ou stimulant"
+        "Urtica est un genre de plantes à fleurs de la famille des…",
+        "Réputée pour un emploi traditionnel varié"
       ],
-      "answer": "Les lavandes sont un genre de plantes à fleurs de la famille…"
+      "answer": "Urtica est un genre de plantes à fleurs de la famille des…"
     },
     {
       "question": "Quelle précaution doit être retenue ?",
       "choices": [
-        "À éviter en cas de grossesse sans avis médical",
         "Contenu informatif uniquement",
-        "Peut interagir avec certains traitements",
-        "Toujours tester les usages avec prudence"
+        "À éviter en cas de grossesse sans avis médical",
+        "Demande prudence si elle est très concentrée",
+        "Peut interagir avec certains traitements"
       ],
       "answer": "Contenu informatif uniquement"
     }
