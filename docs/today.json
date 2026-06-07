@@ -1,29 +1,29 @@
 {
-  "date": "2026-06-06",
-  "plant_name": "Pissenlit",
+  "date": "2026-06-07",
+  "plant_name": "Romarin",
   "latin_name": "",
-  "where_grows": "Pissenlit, ou dent-de-lion, est un nom vernaculaire ambigu en français. On appelle « pissenlit » diverses plantes à tige généralement creuse et dont l'inflorescence est un capitule plat et jaune. Ce capitule est généralement à fleurons ligulés. C'est la couleur jaune du capitule et sa forme plate qui déterminent généralement l'emploi du nom « pissenlit » pour désigner telle ou telle espèce.",
+  "where_grows": "Le Romarin, Salvia rosmarinus, est une espèce de plantes à fleurs de la famille des Lamiacées. C’est un arbrisseau poussant à l’état sauvage sur le pourtour méditerranéen, en particulier dans les garrigues arides et rocailleuses, sur terrains calcaires.",
   "culinary_uses": "La plante peut parfois être utilisée en tisane, en cuisine ou en condiment, selon l'espèce.",
-  "traditional_benefits": "Pissenlit, ou dent-de-lion, est un nom vernaculaire ambigu en français. On appelle « pissenlit » diverses plantes à tige généralement creuse et dont l'inflorescence est un capitule plat et jaune. Ce capitule est généralement à fleurons ligulés. C'est la couleur jaune du capitule et sa forme plate qui déterminent généralement l'emploi du nom « pissenlit » pour désigner telle ou telle espèce.",
+  "traditional_benefits": "Le Romarin, Salvia rosmarinus, est une espèce de plantes à fleurs de la famille des Lamiacées. C’est un arbrisseau poussant à l’état sauvage sur le pourtour méditerranéen, en particulier dans les garrigues arides et rocailleuses, sur terrains calcaires.",
   "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/DandelionComparison.png",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Rosmarinus_officinalis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-258.jpg",
   "quiz": [
     {
       "question": "Où pousse surtout cette plante ?",
       "choices": [
-        "Zones humides et ombragées",
+        "Bords de chemins et prairies",
         "Milieux tropicaux très chauds",
-        "Pissenlit, ou dent-de-lion, est un nom vernaculaire ambigu en français",
-        "Régions alpines très froides"
+        "Sols secs et très ensoleillés",
+        "Le Romarin, Salvia rosmarinus, est une espèce de plantes à fleurs de…"
       ],
-      "answer": "Pissenlit, ou dent-de-lion, est un nom vernaculaire ambigu en français"
+      "answer": "Le Romarin, Salvia rosmarinus, est une espèce de plantes à fleurs de…"
     },
     {
       "question": "Quel usage culinaire correspond le mieux à cette plante ?",
       "choices": [
-        "La plante peut parfois être utilisée en tisane, en cuisine ou en…",
-        "En macération ou en huile parfumée",
         "En assaisonnement de plats simples",
+        "En soupe, en tisane ou en condiment",
+        "La plante peut parfois être utilisée en tisane, en cuisine ou en…",
         "En dessert ou en boisson aromatique"
       ],
       "answer": "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
@@ -31,20 +31,20 @@
     {
       "question": "Quel bienfait traditionnel est le mieux mis en avant ?",
       "choices": [
-        "Pissenlit, ou dent-de-lion, est un nom vernaculaire ambigu en français",
-        "Traditionnellement associée au confort digestif",
-        "Connu pour ses usages populaires en tisane",
+        "Le Romarin, Salvia rosmarinus, est une espèce de plantes à fleurs de…",
+        "Souvent utilisée pour la détente et l'apaisement",
+        "Appréciée pour son côté tonique ou stimulant",
         "Réputée pour un emploi traditionnel varié"
       ],
-      "answer": "Pissenlit, ou dent-de-lion, est un nom vernaculaire ambigu en français"
+      "answer": "Le Romarin, Salvia rosmarinus, est une espèce de plantes à fleurs de…"
     },
     {
       "question": "Quelle précaution doit être retenue ?",
       "choices": [
         "Contenu informatif uniquement",
-        "Demande prudence si elle est très concentrée",
-        "À éviter en cas de grossesse sans avis médical",
-        "Contenu informatif, pas un conseil médical"
+        "Toujours tester les usages avec prudence",
+        "Peut interagir avec certains traitements",
+        "Demande prudence si elle est très concentrée"
       ],
       "answer": "Contenu informatif uniquement"
     }
