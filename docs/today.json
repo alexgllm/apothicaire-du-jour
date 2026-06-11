@@ -1,50 +1,50 @@
 {
-  "date": "2026-06-10",
-  "plant_name": "Sauge",
+  "date": "2026-06-11",
+  "plant_name": "Camomille",
   "latin_name": "",
-  "where_grows": "Les sauges, Salvia en latin, sont un genre de plantes à fleurs de la famille des Lamiacées. Il comprend plus de 900 espèces, annuelles, bisannuelles, vivaces ou arbustives. Une dizaine de sauges sont indigènes en Europe, par exemple la sauge des prés.",
+  "where_grows": "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant à des petites marguerites. Deux espèces sont couramment utilisées pour préparer des infusions à base de plantes en médecine traditionnelle, mais il n'existe pas, en 2023, de preuves suffisantes que la camomille ait un quelconque effet sur la santé.",
   "culinary_uses": "La plante peut parfois être utilisée en tisane, en cuisine ou en condiment, selon l'espèce.",
-  "traditional_benefits": "Les sauges, Salvia en latin, sont un genre de plantes à fleurs de la famille des Lamiacées. Il comprend plus de 900 espèces, annuelles, bisannuelles, vivaces ou arbustives. Une dizaine de sauges sont indigènes en Europe, par exemple la sauge des prés.",
+  "traditional_benefits": "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant à des petites marguerites. Deux espèces sont couramment utilisées pour préparer des infusions à base de plantes en médecine traditionnelle, mais il n'existe pas, en 2023, de preuves suffisantes que la camomille ait un quelconque effet sur la santé.",
   "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Wiesensalbei_1.jpg",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Kamomillasaunio_%28Matricaria_recutita%29.JPG",
   "quiz": [
     {
       "question": "Où pousse surtout cette plante ?",
       "choices": [
-        "Sols secs et très ensoleillés",
-        "Zones humides et ombragées",
+        "Bords de chemins et prairies",
         "Milieux tropicaux très chauds",
-        "Les sauges, Salvia en latin, sont un genre de plantes à fleurs…"
+        "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant…",
+        "Régions alpines très froides"
       ],
-      "answer": "Les sauges, Salvia en latin, sont un genre de plantes à fleurs…"
+      "answer": "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant…"
     },
     {
       "question": "Quel usage culinaire correspond le mieux à cette plante ?",
       "choices": [
         "À consommer en salade ou en infusion",
-        "La plante peut parfois être utilisée en tisane, en cuisine ou en…",
-        "En dessert ou en boisson aromatique",
-        "En assaisonnement de plats simples"
+        "En macération ou en huile parfumée",
+        "En soupe, en tisane ou en condiment",
+        "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
       ],
       "answer": "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
     },
     {
       "question": "Quel bienfait traditionnel est le mieux mis en avant ?",
       "choices": [
-        "Les sauges, Salvia en latin, sont un genre de plantes à fleurs…",
-        "Connu pour ses usages populaires en tisane",
         "Appréciée pour son côté tonique ou stimulant",
-        "Traditionnellement associée au confort digestif"
+        "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant…",
+        "Connu pour ses usages populaires en tisane",
+        "Réputée pour un emploi traditionnel varié"
       ],
-      "answer": "Les sauges, Salvia en latin, sont un genre de plantes à fleurs…"
+      "answer": "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant…"
     },
     {
       "question": "Quelle précaution doit être retenue ?",
       "choices": [
-        "Contenu informatif, pas un conseil médical",
-        "À éviter en cas de grossesse sans avis médical",
+        "Contenu informatif uniquement",
+        "Peut interagir avec certains traitements",
         "Toujours tester les usages avec prudence",
-        "Contenu informatif uniquement"
+        "Contenu informatif, pas un conseil médical"
       ],
       "answer": "Contenu informatif uniquement"
     }
