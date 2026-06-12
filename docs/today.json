@@ -1,29 +1,29 @@
 {
-  "date": "2026-06-11",
-  "plant_name": "Camomille",
+  "date": "2026-06-12",
+  "plant_name": "Lavande",
   "latin_name": "",
-  "where_grows": "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant à des petites marguerites. Deux espèces sont couramment utilisées pour préparer des infusions à base de plantes en médecine traditionnelle, mais il n'existe pas, en 2023, de preuves suffisantes que la camomille ait un quelconque effet sur la santé.",
+  "where_grows": "Les lavandes sont un genre de plantes à fleurs de la famille des Lamiaceae, anciennement nommées Labiées.",
   "culinary_uses": "La plante peut parfois être utilisée en tisane, en cuisine ou en condiment, selon l'espèce.",
-  "traditional_benefits": "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant à des petites marguerites. Deux espèces sont couramment utilisées pour préparer des infusions à base de plantes en médecine traditionnelle, mais il n'existe pas, en 2023, de preuves suffisantes que la camomille ait un quelconque effet sur la santé.",
+  "traditional_benefits": "Les lavandes sont un genre de plantes à fleurs de la famille des Lamiaceae, anciennement nommées Labiées.",
   "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Kamomillasaunio_%28Matricaria_recutita%29.JPG",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/Lavandula_angustifolia_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-087.jpg",
   "quiz": [
     {
       "question": "Où pousse surtout cette plante ?",
       "choices": [
         "Bords de chemins et prairies",
-        "Milieux tropicaux très chauds",
-        "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant…",
-        "Régions alpines très froides"
+        "Les lavandes sont un genre de plantes à fleurs de la famille…",
+        "Sols secs et très ensoleillés",
+        "Milieux tropicaux très chauds"
       ],
-      "answer": "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant…"
+      "answer": "Les lavandes sont un genre de plantes à fleurs de la famille…"
     },
     {
       "question": "Quel usage culinaire correspond le mieux à cette plante ?",
       "choices": [
-        "À consommer en salade ou en infusion",
-        "En macération ou en huile parfumée",
         "En soupe, en tisane ou en condiment",
+        "En macération ou en huile parfumée",
+        "À consommer en salade ou en infusion",
         "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
       ],
       "answer": "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
@@ -31,20 +31,20 @@
     {
       "question": "Quel bienfait traditionnel est le mieux mis en avant ?",
       "choices": [
-        "Appréciée pour son côté tonique ou stimulant",
-        "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant…",
         "Connu pour ses usages populaires en tisane",
-        "Réputée pour un emploi traditionnel varié"
+        "Réputée pour un emploi traditionnel varié",
+        "Les lavandes sont un genre de plantes à fleurs de la famille…",
+        "Traditionnellement associée au confort digestif"
       ],
-      "answer": "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant…"
+      "answer": "Les lavandes sont un genre de plantes à fleurs de la famille…"
     },
     {
       "question": "Quelle précaution doit être retenue ?",
       "choices": [
-        "Contenu informatif uniquement",
         "Peut interagir avec certains traitements",
-        "Toujours tester les usages avec prudence",
-        "Contenu informatif, pas un conseil médical"
+        "Contenu informatif uniquement",
+        "À éviter en cas de grossesse sans avis médical",
+        "Toujours tester les usages avec prudence"
       ],
       "answer": "Contenu informatif uniquement"
     }
