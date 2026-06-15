@@ -1,50 +1,50 @@
 {
-  "date": "2026-06-14",
-  "plant_name": "Basilic",
+  "date": "2026-06-15",
+  "plant_name": "Mélisse",
   "latin_name": "",
-  "where_grows": "Basilic peut désigner :",
+  "where_grows": "La Mélisse officinale est une espèce de plantes à fleurs de la famille des Lamiacées. C'est une plante herbacée vivace originaire du bassin méditerranéen. Son nom vient du grec μελισσόφυλλον, melissophullon, qui signifie « feuille à abeilles » ou « herbe aux abeilles ».",
   "culinary_uses": "La plante peut parfois être utilisée en tisane, en cuisine ou en condiment, selon l'espèce.",
-  "traditional_benefits": "Basilic peut désigner :",
+  "traditional_benefits": "La Mélisse officinale est une espèce de plantes à fleurs de la famille des Lamiacées. C'est une plante herbacée vivace originaire du bassin méditerranéen. Son nom vient du grec μελισσόφυλλον, melissophullon, qui signifie « feuille à abeilles » ou « herbe aux abeilles ».",
   "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
-  "image": "",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Melissa_officinalis_1.jpg",
   "quiz": [
     {
       "question": "Où pousse surtout cette plante ?",
       "choices": [
-        "Basilic peut désigner :",
         "Zones humides et ombragées",
-        "Régions alpines très froides",
-        "Sols secs et très ensoleillés"
+        "La Mélisse officinale est une espèce de plantes à fleurs de la…",
+        "Milieux tropicaux très chauds",
+        "Bords de chemins et prairies"
       ],
-      "answer": "Basilic peut désigner :"
+      "answer": "La Mélisse officinale est une espèce de plantes à fleurs de la…"
     },
     {
       "question": "Quel usage culinaire correspond le mieux à cette plante ?",
       "choices": [
-        "En macération ou en huile parfumée",
+        "En dessert ou en boisson aromatique",
         "La plante peut parfois être utilisée en tisane, en cuisine ou en…",
         "En assaisonnement de plats simples",
-        "En dessert ou en boisson aromatique"
+        "En soupe, en tisane ou en condiment"
       ],
       "answer": "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
     },
     {
       "question": "Quel bienfait traditionnel est le mieux mis en avant ?",
       "choices": [
-        "Basilic peut désigner :",
+        "La Mélisse officinale est une espèce de plantes à fleurs de la…",
+        "Réputée pour un emploi traditionnel varié",
         "Traditionnellement associée au confort digestif",
-        "Souvent utilisée pour la détente et l'apaisement",
         "Appréciée pour son côté tonique ou stimulant"
       ],
-      "answer": "Basilic peut désigner :"
+      "answer": "La Mélisse officinale est une espèce de plantes à fleurs de la…"
     },
     {
       "question": "Quelle précaution doit être retenue ?",
       "choices": [
         "Contenu informatif, pas un conseil médical",
         "Demande prudence si elle est très concentrée",
-        "Toujours tester les usages avec prudence",
-        "Contenu informatif uniquement"
+        "Contenu informatif uniquement",
+        "Peut interagir avec certains traitements"
       ],
       "answer": "Contenu informatif uniquement"
     }
