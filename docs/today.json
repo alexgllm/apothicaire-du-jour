@@ -1,47 +1,47 @@
 {
-  "date": "2026-06-15",
-  "plant_name": "Mélisse",
+  "date": "2026-06-16",
+  "plant_name": "Fenouil",
   "latin_name": "",
-  "where_grows": "La Mélisse officinale est une espèce de plantes à fleurs de la famille des Lamiacées. C'est une plante herbacée vivace originaire du bassin méditerranéen. Son nom vient du grec μελισσόφυλλον, melissophullon, qui signifie « feuille à abeilles » ou « herbe aux abeilles ».",
+  "where_grows": "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de plantes de genres divers, notamment de la famille des Apiaceae. Ce sont des plantes herbacées au feuillage aromatique, dont certaines sont consommables. Le mot fenouil provient du latin Foeniculum qui signifie foin (foenum) de petite taille, nom donné en raison de la finesse de son feuillage.",
   "culinary_uses": "La plante peut parfois être utilisée en tisane, en cuisine ou en condiment, selon l'espèce.",
-  "traditional_benefits": "La Mélisse officinale est une espèce de plantes à fleurs de la famille des Lamiacées. C'est une plante herbacée vivace originaire du bassin méditerranéen. Son nom vient du grec μελισσόφυλλον, melissophullon, qui signifie « feuille à abeilles » ou « herbe aux abeilles ».",
+  "traditional_benefits": "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de plantes de genres divers, notamment de la famille des Apiaceae. Ce sont des plantes herbacées au feuillage aromatique, dont certaines sont consommables. Le mot fenouil provient du latin Foeniculum qui signifie foin (foenum) de petite taille, nom donné en raison de la finesse de son feuillage.",
   "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Melissa_officinalis_1.jpg",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Foeniculum_vulgare.JPG",
   "quiz": [
     {
       "question": "Où pousse surtout cette plante ?",
       "choices": [
-        "Zones humides et ombragées",
-        "La Mélisse officinale est une espèce de plantes à fleurs de la…",
-        "Milieux tropicaux très chauds",
-        "Bords de chemins et prairies"
+        "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de…",
+        "Bords de chemins et prairies",
+        "Sols secs et très ensoleillés",
+        "Zones humides et ombragées"
       ],
-      "answer": "La Mélisse officinale est une espèce de plantes à fleurs de la…"
+      "answer": "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de…"
     },
     {
       "question": "Quel usage culinaire correspond le mieux à cette plante ?",
       "choices": [
+        "En macération ou en huile parfumée",
+        "À consommer en salade ou en infusion",
         "En dessert ou en boisson aromatique",
-        "La plante peut parfois être utilisée en tisane, en cuisine ou en…",
-        "En assaisonnement de plats simples",
-        "En soupe, en tisane ou en condiment"
+        "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
       ],
       "answer": "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
     },
     {
       "question": "Quel bienfait traditionnel est le mieux mis en avant ?",
       "choices": [
-        "La Mélisse officinale est une espèce de plantes à fleurs de la…",
-        "Réputée pour un emploi traditionnel varié",
-        "Traditionnellement associée au confort digestif",
+        "Souvent utilisée pour la détente et l'apaisement",
+        "Connu pour ses usages populaires en tisane",
+        "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de…",
         "Appréciée pour son côté tonique ou stimulant"
       ],
-      "answer": "La Mélisse officinale est une espèce de plantes à fleurs de la…"
+      "answer": "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de…"
     },
     {
       "question": "Quelle précaution doit être retenue ?",
       "choices": [
-        "Contenu informatif, pas un conseil médical",
+        "Toujours tester les usages avec prudence",
         "Demande prudence si elle est très concentrée",
         "Contenu informatif uniquement",
         "Peut interagir avec certains traitements"
