@@ -1,50 +1,50 @@
 {
-  "date": "2026-07-01",
-  "plant_name": "Romarin",
+  "date": "2026-07-02",
+  "plant_name": "Menthe poivrée",
   "latin_name": "",
-  "where_grows": "Le Romarin, Salvia rosmarinus, est une espèce de plantes à fleurs de la famille des Lamiacées. C’est un arbrisseau poussant à l’état sauvage sur le pourtour méditerranéen, en particulier dans les garrigues arides et rocailleuses, sur terrains calcaires.",
+  "where_grows": "La Menthe poivrée, aussi connue sous son nom anglais, Peppermint, est une plante herbacée de la famille des Lamiacées. C'est une menthe issue d'une hybridation spontanée, hexaploïde, entre la menthe aquatique et la menthe verte, cultivée en Angleterre à partir du XVIIe siècle.",
   "culinary_uses": "La plante peut parfois être utilisée en tisane, en cuisine ou en condiment, selon l'espèce.",
-  "traditional_benefits": "Le Romarin, Salvia rosmarinus, est une espèce de plantes à fleurs de la famille des Lamiacées. C’est un arbrisseau poussant à l’état sauvage sur le pourtour méditerranéen, en particulier dans les garrigues arides et rocailleuses, sur terrains calcaires.",
+  "traditional_benefits": "La Menthe poivrée, aussi connue sous son nom anglais, Peppermint, est une plante herbacée de la famille des Lamiacées. C'est une menthe issue d'une hybridation spontanée, hexaploïde, entre la menthe aquatique et la menthe verte, cultivée en Angleterre à partir du XVIIe siècle.",
   "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Rosmarinus_officinalis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-258.jpg",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Mentha_%C3%97_piperita_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-095.jpg",
   "quiz": [
     {
       "question": "Où pousse surtout cette plante ?",
       "choices": [
-        "Le Romarin, Salvia rosmarinus, est une espèce de plantes à fleurs de…",
-        "Milieux tropicaux très chauds",
-        "Bords de chemins et prairies",
-        "Zones humides et ombragées"
+        "La Menthe poivrée, aussi connue sous son nom anglais, Peppermint, est une…",
+        "Zones humides et ombragées",
+        "Régions alpines très froides",
+        "Milieux tropicaux très chauds"
       ],
-      "answer": "Le Romarin, Salvia rosmarinus, est une espèce de plantes à fleurs de…"
+      "answer": "La Menthe poivrée, aussi connue sous son nom anglais, Peppermint, est une…"
     },
     {
       "question": "Quel usage culinaire correspond le mieux à cette plante ?",
       "choices": [
-        "À consommer en salade ou en infusion",
         "En dessert ou en boisson aromatique",
-        "En macération ou en huile parfumée",
-        "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
+        "La plante peut parfois être utilisée en tisane, en cuisine ou en…",
+        "En assaisonnement de plats simples",
+        "En soupe, en tisane ou en condiment"
       ],
       "answer": "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
     },
     {
       "question": "Quel bienfait traditionnel est le mieux mis en avant ?",
       "choices": [
-        "Appréciée pour son côté tonique ou stimulant",
-        "Souvent utilisée pour la détente et l'apaisement",
+        "La Menthe poivrée, aussi connue sous son nom anglais, Peppermint, est une…",
+        "Connu pour ses usages populaires en tisane",
         "Réputée pour un emploi traditionnel varié",
-        "Le Romarin, Salvia rosmarinus, est une espèce de plantes à fleurs de…"
+        "Traditionnellement associée au confort digestif"
       ],
-      "answer": "Le Romarin, Salvia rosmarinus, est une espèce de plantes à fleurs de…"
+      "answer": "La Menthe poivrée, aussi connue sous son nom anglais, Peppermint, est une…"
     },
     {
       "question": "Quelle précaution doit être retenue ?",
       "choices": [
-        "À éviter en cas de grossesse sans avis médical",
-        "Peut interagir avec certains traitements",
+        "Demande prudence si elle est très concentrée",
         "Contenu informatif uniquement",
-        "Contenu informatif, pas un conseil médical"
+        "Contenu informatif, pas un conseil médical",
+        "À éviter en cas de grossesse sans avis médical"
       ],
       "answer": "Contenu informatif uniquement"
     }
