@@ -1,29 +1,29 @@
 {
-  "date": "2026-07-14",
-  "plant_name": "Menthe poivrée",
+  "date": "2026-07-15",
+  "plant_name": "Thym",
   "latin_name": "",
-  "where_grows": "La Menthe poivrée, aussi connue sous son nom anglais, Peppermint, est une plante herbacée de la famille des Lamiacées. C'est une menthe issue d'une hybridation spontanée, hexaploïde, entre la menthe aquatique et la menthe verte, cultivée en Angleterre à partir du XVIIe siècle.",
+  "where_grows": "Thymus est un genre de plantes à fleurs de la famille des Lamiacées. Ce genre comporte plus de 300 espèces. Elles sont originaires d'Europe, d'Afrique, d'Asie et du Groenland. Ce sont des plantes rampantes ou en coussinet portant de petites fleurs rose pâle ou blanches. Ces plantes sont riches en huiles essentielles et à ce titre font partie des plantes aromatiques. La principale huile essentielle du thym commun est un terpénoïde qui lui doit son nom, le thymol, une substance bactéricide. Dans le sud de la France, le thym est aussi fréquemment appelé farigoule.",
   "culinary_uses": "La plante peut parfois être utilisée en tisane, en cuisine ou en condiment, selon l'espèce.",
-  "traditional_benefits": "La Menthe poivrée, aussi connue sous son nom anglais, Peppermint, est une plante herbacée de la famille des Lamiacées. C'est une menthe issue d'une hybridation spontanée, hexaploïde, entre la menthe aquatique et la menthe verte, cultivée en Angleterre à partir du XVIIe siècle.",
+  "traditional_benefits": "Thymus est un genre de plantes à fleurs de la famille des Lamiacées. Ce genre comporte plus de 300 espèces. Elles sont originaires d'Europe, d'Afrique, d'Asie et du Groenland. Ce sont des plantes rampantes ou en coussinet portant de petites fleurs rose pâle ou blanches. Ces plantes sont riches en huiles essentielles et à ce titre font partie des plantes aromatiques. La principale huile essentielle du thym commun est un terpénoïde qui lui doit son nom, le thymol, une substance bactéricide. Dans le sud de la France, le thym est aussi fréquemment appelé farigoule.",
   "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Mentha_%C3%97_piperita_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-095.jpg",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Thymus_vulgaris4.JPG",
   "quiz": [
     {
       "question": "Où pousse surtout cette plante ?",
       "choices": [
-        "Milieux tropicaux très chauds",
-        "La Menthe poivrée, aussi connue sous son nom anglais, Peppermint, est une…",
         "Bords de chemins et prairies",
+        "Milieux tropicaux très chauds",
+        "Thymus est un genre de plantes à fleurs de la famille des…",
         "Zones humides et ombragées"
       ],
-      "answer": "La Menthe poivrée, aussi connue sous son nom anglais, Peppermint, est une…"
+      "answer": "Thymus est un genre de plantes à fleurs de la famille des…"
     },
     {
       "question": "Quel usage culinaire correspond le mieux à cette plante ?",
       "choices": [
-        "En dessert ou en boisson aromatique",
-        "En assaisonnement de plats simples",
         "En macération ou en huile parfumée",
+        "En assaisonnement de plats simples",
+        "En dessert ou en boisson aromatique",
         "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
       ],
       "answer": "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
@@ -31,20 +31,20 @@
     {
       "question": "Quel bienfait traditionnel est le mieux mis en avant ?",
       "choices": [
-        "Traditionnellement associée au confort digestif",
-        "La Menthe poivrée, aussi connue sous son nom anglais, Peppermint, est une…",
+        "Thymus est un genre de plantes à fleurs de la famille des…",
         "Réputée pour un emploi traditionnel varié",
+        "Connu pour ses usages populaires en tisane",
         "Appréciée pour son côté tonique ou stimulant"
       ],
-      "answer": "La Menthe poivrée, aussi connue sous son nom anglais, Peppermint, est une…"
+      "answer": "Thymus est un genre de plantes à fleurs de la famille des…"
     },
     {
       "question": "Quelle précaution doit être retenue ?",
       "choices": [
         "Demande prudence si elle est très concentrée",
         "Contenu informatif uniquement",
-        "À éviter en cas de grossesse sans avis médical",
-        "Toujours tester les usages avec prudence"
+        "Toujours tester les usages avec prudence",
+        "À éviter en cas de grossesse sans avis médical"
       ],
       "answer": "Contenu informatif uniquement"
     }
