@@ -1,50 +1,50 @@
 {
-  "date": "2026-08-03",
-  "plant_name": "Fenouil",
+  "date": "2026-08-04",
+  "plant_name": "Verveine",
   "latin_name": "",
-  "where_grows": "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de plantes de genres divers, notamment de la famille des Apiaceae. Ce sont des plantes herbacées au feuillage aromatique, dont certaines sont consommables. Le mot fenouil provient du latin Foeniculum qui signifie foin (foenum) de petite taille, nom donné en raison de la finesse de son feuillage.",
+  "where_grows": "Les verveines sont des plantes de la famille des Verbenaceae. Ce sont des plantes aromatiques ou ornementales.",
   "culinary_uses": "La plante peut parfois être utilisée en tisane, en cuisine ou en condiment, selon l'espèce.",
-  "traditional_benefits": "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de plantes de genres divers, notamment de la famille des Apiaceae. Ce sont des plantes herbacées au feuillage aromatique, dont certaines sont consommables. Le mot fenouil provient du latin Foeniculum qui signifie foin (foenum) de petite taille, nom donné en raison de la finesse de son feuillage.",
+  "traditional_benefits": "Les verveines sont des plantes de la famille des Verbenaceae. Ce sont des plantes aromatiques ou ornementales.",
   "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Foeniculum_vulgare.JPG",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Bonariensis.jpg",
   "quiz": [
     {
       "question": "Où pousse surtout cette plante ?",
       "choices": [
-        "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de…",
         "Milieux tropicaux très chauds",
-        "Sols secs et très ensoleillés",
-        "Zones humides et ombragées"
+        "Régions alpines très froides",
+        "Bords de chemins et prairies",
+        "Les verveines sont des plantes de la famille des Verbenaceae"
       ],
-      "answer": "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de…"
+      "answer": "Les verveines sont des plantes de la famille des Verbenaceae"
     },
     {
       "question": "Quel usage culinaire correspond le mieux à cette plante ?",
       "choices": [
         "La plante peut parfois être utilisée en tisane, en cuisine ou en…",
+        "En macération ou en huile parfumée",
         "En dessert ou en boisson aromatique",
-        "En soupe, en tisane ou en condiment",
-        "En assaisonnement de plats simples"
+        "À consommer en salade ou en infusion"
       ],
       "answer": "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
     },
     {
       "question": "Quel bienfait traditionnel est le mieux mis en avant ?",
       "choices": [
-        "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de…",
-        "Appréciée pour son côté tonique ou stimulant",
-        "Traditionnellement associée au confort digestif",
-        "Souvent utilisée pour la détente et l'apaisement"
+        "Les verveines sont des plantes de la famille des Verbenaceae",
+        "Souvent utilisée pour la détente et l'apaisement",
+        "Réputée pour un emploi traditionnel varié",
+        "Appréciée pour son côté tonique ou stimulant"
       ],
-      "answer": "Fenouil est un nom vernaculaire ambigu désignant, en français, une multitude de…"
+      "answer": "Les verveines sont des plantes de la famille des Verbenaceae"
     },
     {
       "question": "Quelle précaution doit être retenue ?",
       "choices": [
-        "Toujours tester les usages avec prudence",
-        "Peut interagir avec certains traitements",
         "Contenu informatif, pas un conseil médical",
-        "Contenu informatif uniquement"
+        "À éviter en cas de grossesse sans avis médical",
+        "Contenu informatif uniquement",
+        "Demande prudence si elle est très concentrée"
       ],
       "answer": "Contenu informatif uniquement"
     }
