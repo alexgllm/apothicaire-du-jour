@@ -1,50 +1,50 @@
 {
-  "date": "2026-08-20",
-  "plant_name": "Thym",
+  "date": "2026-08-21",
+  "plant_name": "Sauge",
   "latin_name": "",
-  "where_grows": "Thymus est un genre de plantes à fleurs de la famille des Lamiacées. Ce genre comporte plus de 300 espèces. Elles sont originaires d'Europe, d'Afrique, d'Asie et du Groenland. Ce sont des plantes rampantes ou en coussinet portant de petites fleurs rose pâle ou blanches. Ces plantes sont riches en huiles essentielles et à ce titre font partie des plantes aromatiques. La principale huile essentielle du thym commun est un terpénoïde qui lui doit son nom, le thymol, une substance bactéricide. Dans le sud de la France, le thym est aussi fréquemment appelé farigoule.",
+  "where_grows": "Les sauges, Salvia en latin, sont un genre de plantes à fleurs de la famille des Lamiacées. Il comprend plus de 900 espèces, annuelles, bisannuelles, vivaces ou arbustives. Une dizaine de sauges sont indigènes en Europe, par exemple la sauge des prés.",
   "culinary_uses": "La plante peut parfois être utilisée en tisane, en cuisine ou en condiment, selon l'espèce.",
-  "traditional_benefits": "Thymus est un genre de plantes à fleurs de la famille des Lamiacées. Ce genre comporte plus de 300 espèces. Elles sont originaires d'Europe, d'Afrique, d'Asie et du Groenland. Ce sont des plantes rampantes ou en coussinet portant de petites fleurs rose pâle ou blanches. Ces plantes sont riches en huiles essentielles et à ce titre font partie des plantes aromatiques. La principale huile essentielle du thym commun est un terpénoïde qui lui doit son nom, le thymol, une substance bactéricide. Dans le sud de la France, le thym est aussi fréquemment appelé farigoule.",
+  "traditional_benefits": "Les sauges, Salvia en latin, sont un genre de plantes à fleurs de la famille des Lamiacées. Il comprend plus de 900 espèces, annuelles, bisannuelles, vivaces ou arbustives. Une dizaine de sauges sont indigènes en Europe, par exemple la sauge des prés.",
   "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Thymus_vulgaris4.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Wiesensalbei_1.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
   "quiz": [
     {
       "question": "Où pousse surtout cette plante ?",
       "choices": [
-        "Bords de chemins et prairies",
         "Sols secs et très ensoleillés",
-        "Régions alpines très froides",
-        "Thymus est un genre de plantes à fleurs de la famille des…"
+        "Bords de chemins et prairies",
+        "Milieux tropicaux très chauds",
+        "Les sauges, Salvia en latin, sont un genre de plantes à fleurs…"
       ],
-      "answer": "Thymus est un genre de plantes à fleurs de la famille des…"
+      "answer": "Les sauges, Salvia en latin, sont un genre de plantes à fleurs…"
     },
     {
       "question": "Quel usage culinaire correspond le mieux à cette plante ?",
       "choices": [
+        "En assaisonnement de plats simples",
         "La plante peut parfois être utilisée en tisane, en cuisine ou en…",
         "À consommer en salade ou en infusion",
-        "En dessert ou en boisson aromatique",
-        "En macération ou en huile parfumée"
+        "En dessert ou en boisson aromatique"
       ],
       "answer": "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
     },
     {
       "question": "Quel bienfait traditionnel est le mieux mis en avant ?",
       "choices": [
-        "Connu pour ses usages populaires en tisane",
-        "Thymus est un genre de plantes à fleurs de la famille des…",
-        "Traditionnellement associée au confort digestif",
-        "Appréciée pour son côté tonique ou stimulant"
+        "Les sauges, Salvia en latin, sont un genre de plantes à fleurs…",
+        "Réputée pour un emploi traditionnel varié",
+        "Appréciée pour son côté tonique ou stimulant",
+        "Souvent utilisée pour la détente et l'apaisement"
       ],
-      "answer": "Thymus est un genre de plantes à fleurs de la famille des…"
+      "answer": "Les sauges, Salvia en latin, sont un genre de plantes à fleurs…"
     },
     {
       "question": "Quelle précaution doit être retenue ?",
       "choices": [
+        "À éviter en cas de grossesse sans avis médical",
         "Toujours tester les usages avec prudence",
         "Contenu informatif uniquement",
-        "Contenu informatif, pas un conseil médical",
-        "À éviter en cas de grossesse sans avis médical"
+        "Demande prudence si elle est très concentrée"
       ],
       "answer": "Contenu informatif uniquement"
     }
