@@ -1,29 +1,29 @@
 {
-  "date": "2026-09-03",
-  "plant_name": "Camomille",
+  "date": "2026-09-04",
+  "plant_name": "Lavande",
   "latin_name": "",
-  "where_grows": "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant à des petites marguerites. Deux espèces sont couramment utilisées pour préparer des infusions à base de plantes en médecine traditionnelle, mais il n'existe pas, en 2023, de preuves suffisantes que la camomille ait un quelconque effet sur la santé.",
+  "where_grows": "Les lavandes sont un genre de plantes à fleurs de la famille des Lamiaceae, anciennement nommées Labiées.",
   "culinary_uses": "La plante peut parfois être utilisée en tisane, en cuisine ou en condiment, selon l'espèce.",
-  "traditional_benefits": "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant à des petites marguerites. Deux espèces sont couramment utilisées pour préparer des infusions à base de plantes en médecine traditionnelle, mais il n'existe pas, en 2023, de preuves suffisantes que la camomille ait un quelconque effet sur la santé.",
+  "traditional_benefits": "Les lavandes sont un genre de plantes à fleurs de la famille des Lamiaceae, anciennement nommées Labiées.",
   "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Kamomillasaunio_%28Matricaria_recutita%29.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/Lavandula_angustifolia_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-087.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
   "quiz": [
     {
       "question": "Où pousse surtout cette plante ?",
       "choices": [
-        "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant…",
+        "Bords de chemins et prairies",
+        "Les lavandes sont un genre de plantes à fleurs de la famille…",
         "Sols secs et très ensoleillés",
-        "Milieux tropicaux très chauds",
-        "Régions alpines très froides"
+        "Zones humides et ombragées"
       ],
-      "answer": "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant…"
+      "answer": "Les lavandes sont un genre de plantes à fleurs de la famille…"
     },
     {
       "question": "Quel usage culinaire correspond le mieux à cette plante ?",
       "choices": [
         "La plante peut parfois être utilisée en tisane, en cuisine ou en…",
-        "En macération ou en huile parfumée",
         "En dessert ou en boisson aromatique",
+        "À consommer en salade ou en infusion",
         "En soupe, en tisane ou en condiment"
       ],
       "answer": "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
@@ -31,20 +31,20 @@
     {
       "question": "Quel bienfait traditionnel est le mieux mis en avant ?",
       "choices": [
-        "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant…",
+        "Appréciée pour son côté tonique ou stimulant",
         "Souvent utilisée pour la détente et l'apaisement",
-        "Connu pour ses usages populaires en tisane",
-        "Réputée pour un emploi traditionnel varié"
+        "Traditionnellement associée au confort digestif",
+        "Les lavandes sont un genre de plantes à fleurs de la famille…"
       ],
-      "answer": "On appelle couramment camomille plusieurs plantes de la famille des Astéracées ressemblant…"
+      "answer": "Les lavandes sont un genre de plantes à fleurs de la famille…"
     },
     {
       "question": "Quelle précaution doit être retenue ?",
       "choices": [
-        "Demande prudence si elle est très concentrée",
-        "Contenu informatif, pas un conseil médical",
+        "Toujours tester les usages avec prudence",
         "Contenu informatif uniquement",
-        "Toujours tester les usages avec prudence"
+        "Demande prudence si elle est très concentrée",
+        "Peut interagir avec certains traitements"
       ],
       "answer": "Contenu informatif uniquement"
     }
