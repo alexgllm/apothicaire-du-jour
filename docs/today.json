@@ -1,50 +1,50 @@
 {
-  "date": "2026-09-05",
-  "plant_name": "Ortie",
+  "date": "2026-09-06",
+  "plant_name": "Basilic",
   "latin_name": "",
-  "where_grows": "Urtica est un genre de plantes à fleurs de la famille des Urticacées qui regroupe une trentaine d'espèces de plantes herbacées à feuilles velues. On en trouve onze en Europe dont cinq en France.",
+  "where_grows": "Basilic peut désigner :",
   "culinary_uses": "La plante peut parfois être utilisée en tisane, en cuisine ou en condiment, selon l'espèce.",
-  "traditional_benefits": "Urtica est un genre de plantes à fleurs de la famille des Urticacées qui regroupe une trentaine d'espèces de plantes herbacées à feuilles velues. On en trouve onze en Europe dont cinq en France.",
+  "traditional_benefits": "Basilic peut désigner :",
   "precautions": "Contenu informatif uniquement. En cas de doute, demande l'avis d'un professionnel de santé.",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Is%C4%B1rgan_otu.jpg/3840px-Is%C4%B1rgan_otu.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "image": "",
   "quiz": [
     {
       "question": "Où pousse surtout cette plante ?",
       "choices": [
-        "Milieux tropicaux très chauds",
-        "Urtica est un genre de plantes à fleurs de la famille des…",
-        "Régions alpines très froides",
-        "Bords de chemins et prairies"
+        "Bords de chemins et prairies",
+        "Basilic peut désigner :",
+        "Sols secs et très ensoleillés",
+        "Milieux tropicaux très chauds"
       ],
-      "answer": "Urtica est un genre de plantes à fleurs de la famille des…"
+      "answer": "Basilic peut désigner :"
     },
     {
       "question": "Quel usage culinaire correspond le mieux à cette plante ?",
       "choices": [
-        "La plante peut parfois être utilisée en tisane, en cuisine ou en…",
+        "En macération ou en huile parfumée",
         "En assaisonnement de plats simples",
-        "En soupe, en tisane ou en condiment",
-        "En dessert ou en boisson aromatique"
+        "À consommer en salade ou en infusion",
+        "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
       ],
       "answer": "La plante peut parfois être utilisée en tisane, en cuisine ou en…"
     },
     {
       "question": "Quel bienfait traditionnel est le mieux mis en avant ?",
       "choices": [
-        "Urtica est un genre de plantes à fleurs de la famille des…",
         "Appréciée pour son côté tonique ou stimulant",
         "Réputée pour un emploi traditionnel varié",
+        "Basilic peut désigner :",
         "Connu pour ses usages populaires en tisane"
       ],
-      "answer": "Urtica est un genre de plantes à fleurs de la famille des…"
+      "answer": "Basilic peut désigner :"
     },
     {
       "question": "Quelle précaution doit être retenue ?",
       "choices": [
-        "Toujours tester les usages avec prudence",
         "Contenu informatif, pas un conseil médical",
         "Contenu informatif uniquement",
-        "À éviter en cas de grossesse sans avis médical"
+        "Peut interagir avec certains traitements",
+        "Demande prudence si elle est très concentrée"
       ],
       "answer": "Contenu informatif uniquement"
     }
